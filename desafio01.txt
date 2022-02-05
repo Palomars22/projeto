@@ -1,0 +1,68 @@
+package Desafio01;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Desafio {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		char sexo = 's';
+		int cerveja = 5;
+		int qtdCerveja = 0;
+		int refri = 10;
+		int qtdRefri = 0;
+		int espetinhos = 7;
+
+		int conta = 0;
+		int ingresso = 0;
+		int taxa = 0;
+		int qtdEspetinho = 0;
+		int consumo = 0;
+
+		System.out.println("Digite sexo da pessoa ");
+		sexo = sc.nextLine().charAt(0);
+		System.out.println("Quantidade de cervejas");
+		qtdCerveja = sc.nextInt();
+		System.out.println("Quantidade de refri");
+		qtdRefri = sc.nextInt();
+		System.out.println("Quantidade de espetinhos");
+		qtdEspetinho = sc.nextInt();
+
+		conta = (cerveja * qtdCerveja) + (refri * qtdRefri) + (espetinhos * qtdEspetinho);
+		consumo = conta;
+		if (conta < 30) {
+			taxa = 4;
+			conta = conta + taxa;
+		} else if (conta > 30) {
+			taxa = 0;
+		}
+		if (sexo == 'M') {
+			conta = conta + 10;
+			ingresso = 10;
+		} else if (sexo == 'F') {
+			conta = conta + 8;
+			ingresso = 8;
+		}
+
+		System.out.println("-----------------------------------------");
+		System.out.println("Sexo : " + sexo);
+		System.out.println("Quantidade de cervejas : " + qtdCerveja);
+		System.out.println("Quantidade de refri : " + qtdRefri);
+		System.out.println("Quantidade de espetinhos : " + qtdEspetinho);
+		System.out.println("-----------------------------------------");
+		System.out.println("Relatorio de Gastos  ");
+		System.out.println("-----------------------------------------");
+		System.out.println("Consumo = R$ : " + consumo);
+		System.out.println("Couvert = R$ :" + taxa);
+		System.out.println("Ingresso = R$ :" + ingresso);
+		System.out.println();
+		System.out.println("Total da conta R$ : " + conta);
+                System.out.println("-----------------------------------------"); 
+	}
+
+}
