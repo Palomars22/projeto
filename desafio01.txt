@@ -14,7 +14,7 @@ public class Desafio {
 		char sexo = 's';
 		int cerveja = 5;
 		int qtdCerveja = 0;
-		int refri = 10;
+		int refri = 5;
 		int qtdRefri = 0;
 		int espetinhos = 7;
 
